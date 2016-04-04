@@ -5,6 +5,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>RestWebService</name>
+  <repositories>
+   <repository>
+       <id>mylibid</id>
+       <url>http://172.31.48.56:8081/nexus/content/groups/public/</url>
+   </repository>
+  </repositories>
   <dependencies>
 		<dependency>
 			<groupId>com.nnat.hello</groupId>
@@ -32,6 +38,5 @@
         </configuration>
       </plugin>
     </plugins>
-
   </build>
 </project>
