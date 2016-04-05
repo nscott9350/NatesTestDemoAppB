@@ -30,7 +30,7 @@ public class Hello {
   
   // This method is called if TEXT_PLAIN is request
   @GET
-  @Produces(MediaType.APPLICATION_JSON)
+  @Produces({"application/javascript"})
   public JSONWithPadding sayJSONHello(@QueryParam("callback") String callback) {
 	return new JSONWithPadding("{ \"application\": \"B\" }",callback);
     //return "{ \"application\": \"B\" }";
