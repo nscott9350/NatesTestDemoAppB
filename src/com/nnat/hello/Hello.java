@@ -3,7 +3,10 @@ package com.nnat.hello;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+
+import com.sun.jersey.api.json.JSONWithPadding;
 
 // Plain old Java Object it does not extend as class or implements 
 // an interface
@@ -28,8 +31,9 @@ public class Hello {
   // This method is called if TEXT_PLAIN is request
   @GET
   @Produces(MediaType.APPLICATION_JSON)
-  public String sayJSONHello() {
-    return "{ \"application\": \"B\" }";
+  public JSONWithPadding sayJSONHello(@QueryParam("callback") String callback) {
+	return new JSONWithPadding("{ \"application\": \"B\" }",callback);
+    //return "{ \"application\": \"B\" }";
   }
 
   // This method is called if XML is request
