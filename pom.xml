@@ -2,6 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>RestWebService</groupId>
   <artifactId>RestWebService</artifactId>
+  <version>1</version>
   <packaging>war</packaging>
   <name>RestWebService</name>
   <repositories>
