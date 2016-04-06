@@ -33,7 +33,7 @@ public class Hello {
   @GET
   @Produces({"application/javascript"})
   public JSONWithPadding sayJSONHello(@QueryParam("callback") String callback) {
-	return new JSONWithPadding( new GenericEntity<Object>("{\"application\": \"B\"}"){},callback);
+	return new JSONWithPadding( new GenericEntity<Object>("{\"application\":\"B\"}"){},callback);
     //return "{ \"application\": \"B\" }";
   }
 
