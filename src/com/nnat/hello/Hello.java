@@ -4,6 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 
 import com.sun.jersey.api.json.JSONWithPadding;
@@ -32,7 +33,7 @@ public class Hello {
   @GET
   @Produces({"application/javascript"})
   public JSONWithPadding sayJSONHello(@QueryParam("callback") String callback) {
-	return new JSONWithPadding("{ \"application\": \"B\" }",callback);
+	return new JSONWithPadding( new GenericEntity("{\"application\": \"B\"}"){},callback);
     //return "{ \"application\": \"B\" }";
   }
 
