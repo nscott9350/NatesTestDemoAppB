@@ -31,11 +31,17 @@ public class Hello {
   
   // This method is called if TEXT_PLAIN is request
   @GET
-  @Produces({"application/javascript"})
+  @Produces("application/javascript")
   public JSONWithPadding sayJSONHello(@QueryParam("callback") String callback) {
-	return new JSONWithPadding( new GenericEntity<Object>("{\"application\":\"B\"}"){},callback);
-    //return "{ \"application\": \"B\" }";
+    return new JSONWithPadding( new GenericEntity<Object>("{\"application\":\"B\"}"){},callback);
+   //return "{ \"application\": \"B\" }";
   }
+  
+  //@GET
+  //@Produces("application/javascript")
+  //public String sayJSONHello() {
+  //  return "{ \"application\": \"B\" }";
+  //}
 
   // This method is called if XML is request
   @GET
